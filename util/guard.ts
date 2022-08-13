@@ -8,5 +8,5 @@ export const isLoggedInStatic = (
   if (req.session["user"]) {
     return next();
   }
-  res.redirect("/login.html");
+  res.render("public/home");
 };
