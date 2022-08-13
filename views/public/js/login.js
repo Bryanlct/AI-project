@@ -19,8 +19,9 @@ function initLoginForm() {
         },
         body: JSON.stringify(formObject),
       });
+      console.log(resp.status)
       if (resp.status === 200) {
-        window.location.href = "/shop.html";
+        window.location.href = "/shop";
       }
     });
   }

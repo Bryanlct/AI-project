@@ -4,13 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cat food & toy Shop</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
   </head>
   <body>
-    <%- include('partials/nav') %> 
-    <h1>Awesome Cat food & toy shop</h1>
-    <a href="login">Login</a>
-    <button>Register</button>
-    <a href="/view/partial/nav.html">Shop</a>
+    <!-- Header -->
+    <%- include('partials/header') %> 
+    <!-- Navbar -->
+    <%- include('partials/nav') %>
+   
+    <!-- Main Body -->
+    <%- include('partials/body') %> 
+   
+    <!-- Footer -->
+    <%- include('partials/footer') %> 
   </body>
 </html>

@@ -20,7 +20,6 @@ export class UserController {
       }
 
       req.session["user"] = { id: user.id };
-
       res.json({ message: "success" });
     } catch (err) {
       res.status(500).json({ message: "Internal Server Error" });
