@@ -7,9 +7,12 @@ import Knex from "knex";
 import * as knexConfig from "./knexfile";
 import path from "path";
 import { isLoggedInStatic } from "./util/guard";
+import ejs from "ejs";
 
 const app = express();
 const knex = Knex(knexConfig[process.env.NODE_ENV || "development"]);
+
+app.set("view engine", ejs);
 
 app.use(express.json());
 
@@ -36,10 +39,13 @@ import { routes } from "./routes";
 
 app.use("/api", routes);
 
-app.use(express.static(path.join(__dirname, "public")));
-app.use(isLoggedInStatic, express.static(path.join(__dirname, "private")));
+app.use(express.static(path.join(__dirname, "view", "public")));
+app.use(
+  isLoggedInStatic,
+  express.static(path.join(__dirname, "view", "private"))
+);
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   //logger
   console.log(`[INFO] listen on port ${PORT}`);
