@@ -8,6 +8,7 @@ const config: { [key: string]: Knex.Config } = {
   development: {
     client: "postgresql",
     connection: {
+      host: process.env.DB_HOST,
       database: process.env.DB_NAME,
       user: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
@@ -38,7 +39,7 @@ const config: { [key: string]: Knex.Config } = {
   },
 
   production: {
-    client: "postgresql",
+    client: "postgresql", 
     connection: {
       database: process.env.DB_NAME,
       user: process.env.DB_USERNAME,
