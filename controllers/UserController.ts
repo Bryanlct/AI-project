@@ -7,6 +7,9 @@ export class UserController {
 
   login = async (req: Request, res: Response) => {
     try {
+      console.log(req.params);
+      console.log(req.query);
+      console.log(req.body);
       const { username, password } = req.body;
       if (!username || !password) {
         res.status(400).json({ message: "Invalid username or password" });
@@ -20,9 +23,21 @@ export class UserController {
       }
 
       req.session["user"] = { id: user.id };
-      res.json({ message: "success" });
+      res.redirect("/");
+      // res.json({ message: "success" });
     } catch (err) {
       res.status(500).json({ message: "Internal Server Error" });
     }
+  };
+
+  logout = async (req: Request, res: Response) => {
+    if (req.session["user"]) {
+      req.session.destroy(() => {
+        console.log("destroyed");
+      });
+      return res.redirect("/");
+    }
+
+    return res.redirect("/");
   };
 }

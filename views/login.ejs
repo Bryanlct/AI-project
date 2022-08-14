@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,14 +15,14 @@
   <body>
     <div class="container mt-5r">
       <h1>login</h1>
-      <form id="form-login">
+      <form id="form-login" action="/api/users/login" method="post">
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="text" class="form-control" id="username" />
+          <input type="text" name="username" class="form-control" id="username" />
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" />
+          <input type="password" name="password" class="form-control" id="password" />
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -44,33 +44,34 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="js/login.js"></script>
+    
   </body>
-</html>
-
-<!-- <div class="field">
-  <p class="control has-icons-left has-icons-right">
-    <input class="input" type="email" placeholder="Email">
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-check"></i>
-    </span>
-  </p>
-</div>
-<div class="field">
-  <p class="control has-icons-left">
-    <input class="input" type="password" placeholder="Password">
-    <span class="icon is-small is-left">
-      <i class="fas fa-lock"></i>
-    </span>
-  </p>
-</div>
-<div class="field">
-  <p class="control">
-    <button class="button is-success">
-      Login
-    </button>
-  </p>
-</div> -->
+</html> -->
+<form action="/api/users/login" method="post">
+  <div class="field">
+    <p class="control has-icons-left has-icons-right">
+      <input class="input" type="text" name="username" placeholder="Email">
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-check"></i>
+      </span>
+    </p>
+  </div>
+  <div class="field">
+    <p class="control has-icons-left">
+      <input class="input" type="password" name="password" placeholder="Password">
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+    </p>
+  </div>
+  <div class="field">
+    <p class="control">
+      <button class="button is-success" type="submit">
+        Login
+      </button>
+    </p>
+  </div>
+</form>

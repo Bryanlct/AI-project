@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="shoppingCart.js"></script>
+
     <title>Cat food & toy Shop</title>
     <link rel="stylesheet" href="https://unpkg.com/bulma">
   </head>
@@ -14,9 +16,27 @@
     <%- include('partials/nav') %>
    
     <!-- Main Body -->
-    <%- include('partials/body') %> 
-   
+    <% if (route == "body") { %>
+      <%- include('partials/body') %> 
+    <% } %>
+    <% if (route == "login") { %>
+      <%- include('login')%> 
+    <% } %>
+    <% if (route == "about") { %>
+      <%- include('about')%> 
+    <% } %>
+
+    <!-- Shopping List -->
+    <% if (route == "catfood") { %>
+      <%- include('layout/catFood')%> 
+    <% } %>
+    <% if (route == "cattoys") { %>
+      <%- include('layout/catToys')%> 
+    <% } %>
+
     <!-- Footer -->
     <%- include('partials/footer') %> 
+    
   </body>
+  
 </html>

@@ -8,5 +8,5 @@ export const isLoggedInStatic = (
   if (req.session["user"]) {
     return next();
   }
-  res.render("public/home");
+  res.render("home", { route: "body", login: false });
 };

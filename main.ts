@@ -5,14 +5,13 @@ import express from "express";
 import expressSession from "express-session";
 import Knex from "knex";
 import * as knexConfig from "./knexfile";
-import path from "path";
 import { isLoggedInStatic } from "./util/guard";
 
 const app = express();
 const knex = Knex(knexConfig[process.env.NODE_ENV || "development"]);
 
 app.set("view engine", 'ejs');
-
+app.use(express.urlencoded({extended:true}))
 app.use(express.json());
 
 app.use(
@@ -35,13 +34,22 @@ const userService = new UserService(knex);
 export const userController = new UserController(userService);
 
 import { routes } from "./routes";
+import { pageRoutes } from "./pageRoutes";
 
+app.use("/",pageRoutes)
 app.use("/api", routes);
 
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static(path.join(__dirname, "public")));
+
+// app.use(
+//   isLoggedInStatic,
+//   express.static(path.join(__dirname, "private"))
+// );
+app.use(express.static('public'));
+
 app.use(
   isLoggedInStatic,
-  express.static(path.join(__dirname, "private"))
+  express.static('private')
 );
 
 const PORT = process.env.PORT || 3000;
