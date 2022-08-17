@@ -7,7 +7,7 @@
         </section>
 
       <section class="section">
-        <h1 class="title">Package 1</h1>
+        <h1 class="title">Package </h1>
         <h2 class="subtitle">Email</h2>
         <div class="content"><%= data.data[0].email %> </div>
         <h2 class="subtitle">Shopping List</h2>
@@ -51,29 +51,9 @@
 
 
             <ul class="pagination-list">
-                <% for( let index = 0; index < data.pagination.total; index++ ) { %>
-                    <li>
-                        <a class="pagination-link" aria-label="Goto page 1" href='/track?page=<%= index %> '><%= index %> </a>
-                    </li>
-                <% } %>
-              <!-- <li>
-                <span class="pagination-ellipsis">&hellip;</span>
-              </li>
-              <li>
-                <a class="pagination-link" aria-label="Goto page 45">45</a>
-              </li>
-              <li>
-                <a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a>
-              </li>
-              <li>
-                <a class="pagination-link" aria-label="Goto page 47">47</a>
-              </li>
-              <li>
-                <span class="pagination-ellipsis">&hellip;</span>
-              </li>
-              <li>
-                <a class="pagination-link" aria-label="Goto page 86">86</a>
-              </li> -->
+
+                <a class="pagination-previous" href="/track?page=<%= data.pagination.currentPage - 1%>">Previous</a>
+                <a class="pagination-next" href="/track?page=<%= data.pagination.currentPage  + 1%>">Next page</a>
             </ul>
           </nav>
     </section>
