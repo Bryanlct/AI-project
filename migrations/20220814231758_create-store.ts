@@ -23,7 +23,7 @@ export async function up(knex: Knex): Promise<void> {
       table.increments();
       table.string("type",255);
       table.string("name",255);
-      table.string("description",255);
+      table.string("description",1000);
       table.string("imageUrl",255);
       table.integer("stock",undefined);
       table.double("price",undefined);

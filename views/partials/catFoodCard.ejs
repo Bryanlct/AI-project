@@ -1,34 +1,36 @@
-<div class="card">
+<div class="card m-5 p-5">
   <div class="card-image">
     <!-- cat image url -->
-    <figure class="image is-4by3">
+    <figure class="image is-3by2">
       <img
-        src="https://bulma.io/images/placeholders/1280x960.png"
+        src="<%= cardData.imageUrl %> "
         alt="Placeholder image"
+        style="
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        "
       />
     </figure>
   </div>
   <div class="card-content">
     <div class="media">
-      <div class="media-left"></div>
-      <div class="media-content">
-        <!-- cat item type -->
+      <div class="media-content store-item">
         <!-- cat food name -->
-        <!-- cat item order -->
-        <p class="title is-4">Cat Food</p>
+        <p class="title is-6"><%= cardData.name %></p>
+        <!-- cat item price -->
+        <p class="content price">$<%= cardData.price %></p>
+        
       </div>
     </div>
-    <!-- cat food description -->
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-      iaculis mauris.
-    </div>
-    
+
     <footer class="card-footer">
-      <a class="card-footer-item button is-success is-outlined" onclick="addItem(1)">+</a>
-      <!-- cat food selected -->
-      <div class="card-footer-item" id="item-count1">0</div>
-      <a class="card-footer-item button is-danger is-outlined" onclick="removeItem(1)">-</a>
+      <button class="button is-black is-fullwidth" onclick="openModal('confirm-modal<%= cardData.id %>')">
+        add to cart
+      </button>
     </footer>
   </div>
 </div>
+  <!-- Card Confirm Modal -->
+  <%- include('confirm-modal',{cardData: cardData}) %>

@@ -1,0 +1,74 @@
+<div id="payment-card-modal" class="modal">
+  <div class="modal-background" style="background: #34568b"></div>
+
+  <div class="modal-content">
+    <form action="/api/users/submitcart" method="post">
+      <div class="box">
+        <input type="text" id="cart-store" name="cartData" style="display: none">
+        <div class="field">
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+              <input
+                class="input is-info"
+                type="email"
+                placeholder="Email input"
+                value=""
+                name="email"
+                required
+              />
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+
+            </div>
+            
+          </div>
+
+          <div class="field">
+            <label class="label">Payment</label>
+            <div class="control">
+              <div class="select">
+                <select name="payment">
+                  <option>Cash</option>
+                  <option>Visa</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Method</label>
+            <div class="control">
+              <div class="select">
+                <select name="method">
+                  <option>Takeaway</option>
+                  <option>delivery</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Address</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="Textarea" name="address" required></textarea>
+            </div>
+          </div> 
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link" type="submit">Submit</button>
+            </div>
+            <div class="control">
+              <button
+                class="button is-dark"
+                onclick="closeModal('payment-card-modal')"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

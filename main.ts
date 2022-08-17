@@ -6,10 +6,11 @@ import expressSession from "express-session";
 import Knex from "knex";
 import * as knexConfig from "./knexfile";
 import { isLoggedInStatic } from "./util/guard";
+import { attachPaginate } from  "knex-paginate";
 
 const app = express();
 const knex = Knex(knexConfig[process.env.NODE_ENV || "development"]);
-
+attachPaginate();
 app.set("view engine", 'ejs');
 app.use(express.urlencoded({extended:true}))
 app.use(express.json());
@@ -29,14 +30,15 @@ app.use((req, res, next) => {
 
 import { UserService } from "./services/UserService";
 import { UserController } from "./controllers/UserController";
-
+import { HomeController } from "./controllers/homeController";
+import { HomeService } from "./services/HomeService";
 const userService = new UserService(knex);
+const homeService = new HomeService(knex);
 export const userController = new UserController(userService);
-
+export const homeController = new HomeController(homeService);
 import { routes } from "./routes";
-import { pageRoutes } from "./pageRoutes";
 
-app.use("/",pageRoutes)
+app.use("/",routes)
 app.use("/api", routes);
 
 // app.use(express.static(path.join(__dirname, "public")));

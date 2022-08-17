@@ -1,0 +1,82 @@
+<section class="hero is-light is-fullheight">
+  <div class="hero-body">
+    <div class="">
+        <section class="section">
+            <p class="title">Tracking delivery</p>
+            
+        </section>
+
+      <section class="section">
+        <h1 class="title">Package 1</h1>
+        <h2 class="subtitle">Email</h2>
+        <div class="content"><%= data.data[0].email %> </div>
+        <h2 class="subtitle">Shopping List</h2>
+        <% for( let index = 0; index < data.data[0].cartData.length; index++ ) { %>
+            <div class="content">
+                <%= data.data[0].cartData[index].name %> 
+            </div>
+            <nav class="level">
+                <div class="level-item">
+                    <img src='<%= data.data[0].cartData[index].imageUrl %>' class="image is-128x128">
+                </div>
+                <div class="level-item">
+                    <%= data.data[0].cartData[index].itemCount %> pieces 
+                </div>
+                <div class="level-item">
+                    $<%= data.data[0].cartData[index].total %> 
+                </div>
+                
+            </nav>
+        <% } %>
+        <h2 class="subtitle">Method</h2>
+        <div class="content">
+            <%= data.data[0].method %> 
+        </div>
+        <h2 class="subtitle">Payment</h2>
+        <div class="content">
+            <%= data.data[0].payment %> 
+        </div>
+        <h2 class="subtitle">Address</h2>
+        <div class="content">
+            <%= data.data[0].address %> 
+        </div>
+        <h2 class="subtitle">Created Date</h2>
+        <div class="content">
+            <%= data.data[0].created_at %> 
+        </div>
+      </section>
+
+      <section class="section">
+        <nav class="pagination" role="navigation" aria-label="pagination">
+
+
+            <ul class="pagination-list">
+                <% for( let index = 0; index < data.pagination.total; index++ ) { %>
+                    <li>
+                        <a class="pagination-link" aria-label="Goto page 1" href='/track?page=<%= index %> '><%= index %> </a>
+                    </li>
+                <% } %>
+              <!-- <li>
+                <span class="pagination-ellipsis">&hellip;</span>
+              </li>
+              <li>
+                <a class="pagination-link" aria-label="Goto page 45">45</a>
+              </li>
+              <li>
+                <a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a>
+              </li>
+              <li>
+                <a class="pagination-link" aria-label="Goto page 47">47</a>
+              </li>
+              <li>
+                <span class="pagination-ellipsis">&hellip;</span>
+              </li>
+              <li>
+                <a class="pagination-link" aria-label="Goto page 86">86</a>
+              </li> -->
+            </ul>
+          </nav>
+    </section>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,62 @@
+<div id='confirm-modal<%= cardData.id %>' class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Cart</p>
+        <button class="delete" aria-label="close" onclick="closeModal('confirm-modal<%= cardData.id %>')"></button>
+      </header>
+      <section class="modal-card-body">
+        <!-- Content ... -->
+        <div class="box" id="cart">
+          <div class="field">
+            <img class="image" src='<%= cardData.imageUrl%>' alt="image" style="
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;">
+          </div>
+          
+          <div class="field">
+
+            <h4 class="title is-6"> Product Name:</h4>
+            <p class="content is-6"> <%= cardData.name %></p>
+
+            <h4 class="title is-6"> Product Description: </h4>
+            <p class="content is-6"> <%= cardData.description %> </p>
+            
+            <h4 class="title is-6"> Product Price: </h4>
+            <p class="content is-6" id="item-price<%= cardData.id %>"> <%= cardData.price %> </p>
+            <h4 class="title is-6"> Total: </h4>
+            <p class="content is-6" id="total-price<%= cardData.id %>">0</p>
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <a
+                  class="card-footer-item button is-success is-outlined"
+                  onclick="addItem('<%= cardData.id %>')"
+                  >+</a
+                >
+              </div>
+              <div class="level-item has-text-centered">
+                <!-- cat food selected -->
+                <div class="card-footer-item" id="item-count<%= cardData.id %>">
+                  0
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <a
+                  class="card-footer-item button is-danger is-outlined"
+                  onclick="removeItem('<%= cardData.id %>')"
+                  >-</a
+                >
+              </div>
+            </nav>
+            <button class="button is-fullwidth is-light" onclick="clearItemCount('<%= cardData.id %>')">Clear items</button>
+          </div>
+        </div>
+        
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-dark is-fullwidth"  onclick="storeShoppingCart('<%= JSON.stringify(cardData) %>')">Add to cart</button>
+      </footer>
+    </div>
+</div>
