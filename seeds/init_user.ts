@@ -10,7 +10,8 @@ export async function seed(knex: Knex): Promise<void> {
     {
       type: "Cat Food",
       name: "Stella & Chewys Cat Food - Freeze-Dried Dinner Morsels - Yummy Lickin Salmon & Chicken 18oz",
-      description: 'Raw, wild-caught fish & cage-free chicken 98% fish & chicken, nutrient-rich organs & bone Fortified with added vitamins & minerals',
+      description:
+        "Raw, wild-caught fish & cage-free chicken 98% fish & chicken, nutrient-rich organs & bone Fortified with added vitamins & minerals",
       imageUrl:
         "https://www.epet.hk/media/catalog/product/cache/35d23b042e32d83bc62cd844cb4d731e/1/4/143116_main._ac_sl1500_v1537293465__1.jpg",
       stock: 10000,
@@ -28,7 +29,8 @@ export async function seed(knex: Knex): Promise<void> {
     {
       type: "Cat Food",
       name: "Stella & Chewys Cat Food - Freeze-Dried Dinner Morsels - Absolutely Rabbit 18oz",
-      description: 'Raw, farm-raised rabbit 98% rabbit, nutrient-rich organs & bone Fortified with added vitamins & minerals Rich in taurine and probiotics for dietary health',
+      description:
+        "Raw, farm-raised rabbit 98% rabbit, nutrient-rich organs & bone Fortified with added vitamins & minerals Rich in taurine and probiotics for dietary health",
       imageUrl:
         "https://cdn.shopify.com/s/files/1/0073/0031/7248/products/ziwipeak-air-dried-cat-food-mackerel-lamb-1kg-cats-771_608x608.jpg?v=1634557031",
       stock: 10000,
@@ -37,7 +39,8 @@ export async function seed(knex: Knex): Promise<void> {
     {
       type: "Cat Food",
       name: "CANAGAN - Chicken with Salmon for Cats (75g x 12 Cans)",
-      description: 'Tender shredded chicken with delicious morsels of salmon, simply cooked in its own natural gravy. Appropriate Ratio of Meat to Vege Grain Free 65% Nutritious Animal Ingredients 35% Vege & Botanicals',
+      description:
+        "Tender shredded chicken with delicious morsels of salmon, simply cooked in its own natural gravy. Appropriate Ratio of Meat to Vege Grain Free 65% Nutritious Animal Ingredients 35% Vege & Botanicals",
       imageUrl:
         "https://cdn.shopify.com/s/files/1/0379/5923/7764/products/tunaadult_1800x1800.png?v=1632908305",
       stock: 10000,
@@ -82,7 +85,8 @@ export async function seed(knex: Knex): Promise<void> {
     {
       type: "Cat Food",
       name: "Orijen Cat & Kitten",
-      description: 'Raw, farm-raised rabbit 98% rabbit, nutrient-rich organs & bone Fortified with added vitamins & minerals Rich in taurine and probiotics for dietary health',
+      description:
+        "Raw, farm-raised rabbit 98% rabbit, nutrient-rich organs & bone Fortified with added vitamins & minerals Rich in taurine and probiotics for dietary health",
       imageUrl:
         "https://shop.divit.com.hk/wp-content/uploads/2022/07/VET-010-00406-Orijen-Cat-_-Kitten.jpg",
       stock: 10000,
@@ -91,7 +95,8 @@ export async function seed(knex: Knex): Promise<void> {
     {
       type: "Cat Food",
       name: "Ziwipeak - Air Dried Cat Food FREE RANGE CHICKEN - 1KG",
-      description: 'Raw farmraised rabbit 98 rabbit nutrientrich organs bone Fortified with added vitamins minerals Rich in taurine and probiotics for dietary health',
+      description:
+        "Raw farmraised rabbit 98 rabbit nutrientrich organs bone Fortified with added vitamins minerals Rich in taurine and probiotics for dietary health",
       imageUrl:
         "https://cdn.shopify.com/s/files/1/0073/0031/7248/products/ziwipeak-air-dried-cat-food-free-range-chicken-1kg-cats-170_480x480.jpg?v=1634557035",
       stock: 10000,
@@ -108,13 +113,121 @@ export async function seed(knex: Knex): Promise<void> {
     },
     {
       type: "Cat Toy",
-      name: "Acana - Regional Pacifica Grain Free Cat Food",
-      description: `When it comes to ACANA® food for dogs, every ingredient matters.`,
+      name: "GiGwi - Melody Chaser (Mouse) Cat Toy",
+      description: `The perfect combination of simulated sound effects and simulated appearance is your cat's new darling.`,
       imageUrl:
-        "https://cdn.shopify.com/s/files/1/0379/5923/7764/products/Acana-RegionalPacifica-4.5kg_1800x1800.png?v=1651130852",
+        "https://shoplineimg.com/5f4c8d639271d80047ffe63d/61279dfeeb999e003e6cfd84/800x.webp?source_format=jpg",
       stock: 10000,
-      price: 660.0,
+      price: 49.0,
     },
+    {
+      type: "Cat Toy",
+      name: "PETKIT - Catpedia Cat Scratcher",
+      description: `PETKIT - Catpedia Cat Scratcher`,
+      imageUrl:
+        "https://shoplineimg.com/5f4c8d639271d80047ffe63d/62ab6d1907faae0018bdd99a/800x.webp?source_format=jpg",
+      stock: 10000,
+      price: 89.0,
+    },
+    {
+      type: "Cat Toy",
+      name: "PETKIT - Bingo Cat Teasing Toy Cat Teaser",
+      description: `PETKIT - Bingo Cat Teasing Toy Cat Teaser.`,
+      imageUrl:
+        "https://shoplineimg.com/5f4c8d639271d80047ffe63d/6261672340d5c9001588a637/800x.webp?source_format=jpg",
+      stock: 10000,
+      price: 69.0,
+    },
+    {
+      type: "Cat Toy",
+      name: "Touchdog - Caterpillar Series Cat Teaser Toy",
+      description: `Touchdog - Caterpillar Series Cat Teaser Toy.`,
+      imageUrl:
+        "https://shoplineimg.com/5f4c8d639271d80047ffe63d/612d0d7d86398400387f615a/800x.webp?source_format=jpg",
+      stock: 10000,
+      price: 39.0,
+    },
+    {
+      type: "Cat Toy",
+      name: "PETSHOP PLAID FISH CAT TOYS",
+      description: `Cotton canvas pet toy printed with waterbase, non-toxic inks. .`,
+      imageUrl:
+        "https://cdn.shopify.com/s/files/1/0263/2908/8075/products/904026_plaid_fish_PHOTO_720x.jpg?v=1619467514",
+      stock: 10000,
+      price: 29.0,
+    },
+    {
+      type: "Cat Toy",
+      name: "PETSHOP CHARMING CHUMS CAT TOYS",
+      description: `Cotton canvas pet toy printed with waterbase, non-toxic inks. .`,
+      imageUrl:
+        "https://cdn.shopify.com/s/files/1/0263/2908/8075/products/904025_charmingchums_PHOTOcopy_720x.jpg?v=1619467452",
+      stock: 10000,
+      price: 29.0,
+    },
+    {
+      type: "Cat Toy",
+      name: "Catit - Pirates Barrel Cat Scratcher",
+      description: `Perfect spot for both small and large catsto scratch and relax.`,
+      imageUrl:
+        "https://shoplineimg.com/5f4c8d639271d80047ffe63d/62615b806f5dcc002146440a/800x.webp?source_format=jpg",
+      stock: 10000,
+      price: 199.0,
+    },
+    {
+      type: "Cat Toy",
+      name: "GiGwi - Melody Chaser (Bee) Cat Toy",
+      description: `GiGwi - Melody Chaser (Bee) Cat Toy.`,
+      imageUrl:
+        "https://shoplineimg.com/5f4c8d639271d80047ffe63d/6261610369264a001e579082/800x.webp?source_format=jpg",
+      stock: 10000,
+      price: 39.0,
+    },
+    {
+      type: "Cat Toy",
+      name: "Petz Route - Ping-Pong Ball with Matatabi (2pcs)",
+      description: `Petz Route - Ping-Pong Ball with Matatabi (2pcs).`,
+      imageUrl:
+        "https://shoplineimg.com/5f4c8d639271d80047ffe63d/60c8c9b652037f003e7cf18a/800x.webp?source_format=jpg",
+      stock: 10000,
+      price: 39.0,
+    },
+    {
+      type: "Cat Toy",
+      name: "GiGwi - Melody Chaser (Bird) Cat Toy",
+      description: `GiGwi - Melody Chaser (Bird) Cat Toy`,
+      imageUrl:
+        "https://shoplineimg.com/5f4c8d639271d80047ffe63d/612781675c627800112eb2bc/800x.webp?source_format=jpg",
+      stock: 10000,
+      price: 49.0,
+    },
+    {
+      type: "Cat Toy",
+      name: "Smack - 100% Matatabi Stuffed Cat Toy (Koi Fish)",
+      description: `Smack - 100% Matatabi Stuffed Cat Toy (Koi Fish)`,
+      imageUrl:
+        "https://shoplineimg.com/5f4c8d639271d80047ffe63d/62ab49e33389cc000ffbfe40/800x.webp?source_format=png",
+      stock: 10000,
+      price: 129.0,
+    },
+    {
+      type: "Cat Toy",
+      name: "Smack - 100% Matatabi Stuffed Cat Toy (Pacific Saury)",
+      description: `Smack - 100% Matatabi Stuffed Cat Toy (Pacific Saury)`,
+      imageUrl:
+        "https://shoplineimg.com/5f4c8d639271d80047ffe63d/6261916823bcb70015685a04/800x.webp?source_format=jpg",
+      stock: 10000,
+      price: 129.0,
+    },
+    {
+      type: "Cat Toy",
+      name: "Smack - 100% Matatabi Stuffed Cat Toy (Rainbow Trout)",
+      description: `Smack - 100% Matatabi Stuffed Cat Toy (Rainbow Trout)`,
+      imageUrl:
+        "https://shoplineimg.com/5f4c8d639271d80047ffe63d/626195ea4ed06d002d855893/800x.webp?source_format=jpg",
+      stock: 10000,
+      price: 159.0,
+    }
   );
 
   // Deletes ALL existing entries
@@ -123,10 +236,10 @@ export async function seed(knex: Knex): Promise<void> {
   // Inserts seed entries
   await knex("users").insert([
     { username: "admin", password: await hashPassword("aaa") },
-    { username: "chun", password: await hashPassword("aaa")},
-    { username: "chung", password: await hashPassword("aaa")},
-    { username: "yuet", password: await hashPassword("aaa")},
-    { username: "sing", password: await hashPassword("aaa")},
+    { username: "chun", password: await hashPassword("aaa") },
+    { username: "chung", password: await hashPassword("aaa") },
+    { username: "yuet", password: await hashPassword("aaa") },
+    { username: "sing", password: await hashPassword("aaa") },
   ]);
   await knex("store").insert(store);
 }
