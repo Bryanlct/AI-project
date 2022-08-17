@@ -47,31 +47,41 @@
     
   </body>
 </html> -->
-<form action="/api/users/login" method="post">
-  <div class="field">
-    <p class="control has-icons-left has-icons-right">
-      <input class="input" type="text" name="username" placeholder="Email">
-      <span class="icon is-small is-left">
-        <i class="fas fa-envelope"></i>
-      </span>
-      <span class="icon is-small is-right">
-        <i class="fas fa-check"></i>
-      </span>
-    </p>
-  </div>
-  <div class="field">
-    <p class="control has-icons-left">
-      <input class="input" type="password" name="password" placeholder="Password">
-      <span class="icon is-small is-left">
-        <i class="fas fa-lock"></i>
-      </span>
-    </p>
-  </div>
-  <div class="field">
-    <p class="control">
-      <button class="button is-success" type="submit">
+<section class="hero is-fullheight">
+
+  <div class="hero-body">
+
+    <form action="/api/users/login" method="post">
+      <div class="field subtitle is-3">
         Login
-      </button>
-    </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input class="input" type="text" name="username" placeholder="Email">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left">
+          <input class="input" type="password" name="password" placeholder="Password">
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <button class="button is-success" type="submit">
+            Login
+          </button>
+        </p>
+      </div>
+    </form>
+    
   </div>
-</form>
+</section>

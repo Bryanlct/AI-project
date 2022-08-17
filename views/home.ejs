@@ -5,16 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="shoppingCart.js"></script>
-
+    
+    <script defer src="modal.js"></script>
+    <script defer src="popup.js"></script>
     <title>Cat food & toy Shop</title>
     <link rel="stylesheet" href="https://unpkg.com/bulma">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="card.css">
   </head>
   <body>
+
     <!-- Header -->
     <%- include('partials/header') %> 
     <!-- Navbar -->
     <%- include('partials/nav') %>
-   
+
     <!-- Main Body -->
     <% if (route == "body") { %>
       <%- include('partials/body') %> 
@@ -25,7 +31,10 @@
     <% if (route == "about") { %>
       <%- include('about')%> 
     <% } %>
-
+    <% if (route == "track") { %>
+      <%- include('track')%> 
+    <% } %>
+    
     <!-- Shopping List -->
     <% if (route == "catfood") { %>
       <%- include('layout/catFood')%> 
@@ -36,7 +45,11 @@
 
     <!-- Footer -->
     <%- include('partials/footer') %> 
-    
+    <!-- Shopping Cart Modal -->
+    <%- include('partials/shopping-cart-modal') %> 
+    <!-- Payment Cart Modal -->
+    <%- include('partials/payment-card-modal') %> 
+
   </body>
   
 </html>

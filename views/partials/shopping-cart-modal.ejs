@@ -1,0 +1,36 @@
+<div id="shopping-cart-modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Cart</p>
+      <button
+        class="delete"
+        aria-label="close"
+        onclick="closeModal('shopping-cart-modal')"
+      ></button>
+    </header>
+    
+    <section class="modal-card-body" id="shopping-cart-modal-body">
+      <!-- Content ... -->
+      
+    </section>
+
+    <footer class="modal-card-foot">
+      <nav class="level">
+        <div class="level-left">
+          <button class="button is-info level-item" onclick="passDataToPayment()">Confirm</button>
+          <button class="button is-danger level-item" onclick="clearSessionStorage()">Clear the store</button>
+          <button class="button level-item" onclick="closeModal('shopping-cart-modal')">
+            Cancel
+          </button>
+        </div>
+        <div class="level-right">
+          <input class="input m-4 disable" id="total-price-text" type="number" disabled="true"></input>
+        </div>
+      </nav>
+
+      
+    </footer>
+   
+  </div>
+</div>

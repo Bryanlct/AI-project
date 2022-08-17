@@ -7,3 +7,4 @@ export const userRoutes = express.Router();
 //path: /login
 userRoutes.post("/login", userController.login);
 userRoutes.post("/logout",userController.logout);
+userRoutes.post("/submitcart",userController.receiveSubmitCart);

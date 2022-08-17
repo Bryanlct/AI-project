@@ -1,28 +1,60 @@
+<% if (data.data.length == 0) { %>
+  <section class="hero is-dark is-fullheight">
+    <div class="hero-body">
+      <div class="">
+        <p class="title">
+          This is the end of the record
+        </p>
+
+      </div>
+    </div>
+  </section>
+  <nav class="pagination" role="navigation" aria-label="pagination">
+    
+    <a class="pagination-next" href="/catfood?page=1">Back to home</a>
+  </nav>
+<% } %>
+
+<!--  -->
+<% if (data.data.length < 3) { %>
 <div class="columns">
-    <div class="column">
-      <%- include('../partials/catFoodCard') %> 
-    </div>
-    <div class="column">
-        <%- include('../partials/catFoodCard') %>
-    </div>
-    <div class="column">
-        <%- include('../partials/catFoodCard') %>   
-    </div>
-    <div class="column">
-        <%- include('../partials/catFoodCard') %>
-    </div>
+  <% for( let index = 0; index < data.data.length; index++ ) { %>
+  <div class="column">
+    <%- include('../partials/catFoodCard',{cardData: data.data[index]}) %>
+  </div>
+  <% } %>
 </div>
+<% } %> <% if (data.data.length > 3) { %>
 <div class="columns">
-    <div class="column">
-      <%- include('../partials/catFoodCard') %> 
-    </div>
-    <div class="column">
-        <%- include('../partials/catFoodCard') %>
-    </div>
-    <div class="column">
-        <%- include('../partials/catFoodCard') %>   
-    </div>
-    <div class="column">
-        <%- include('../partials/catFoodCard') %>
-    </div>
+  <% for( let index = 0; index < 3; index++ ) { %>
+  <div class="column">
+    <%- include('../partials/catFoodCard',{cardData: data.data[index]}) %>
+  </div>
+  <% } %>
 </div>
+<% } %> <% if (data.data.length > 3 && data.data.length > 6) { %>
+
+<div class="columns">
+  <% for( let index = 3; index < 6; index++ ) { %>
+  <div class="column">
+    <%- include('../partials/catFoodCard',{cardData: data.data[index]}) %>
+  </div>
+  <% } %>
+</div>
+<% } %> <% if (data.data.length > 6 && data.data.length >= 9) { %>
+
+<div class="columns">
+  <% for( let index = 6; index < 9; index++ ) { %>
+  <div class="column">
+    <%- include('../partials/catFoodCard',{cardData: data.data[index]}) %>
+  </div>
+  <% } %>
+</div>
+<% } %>
+
+<% if (data.data.length != 0) { %>
+  <nav class="pagination" role="navigation" aria-label="pagination">
+    <a class="pagination-previous" href='/catfood?page=<%= data.pagination.currentPage - 1 %> '>Previous </a>
+    <a class="pagination-next" href="/catfood?page=<%= data.pagination.currentPage + 1 %>">Next page</a>
+  </nav>
+<% } %>
