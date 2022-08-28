@@ -111,15 +111,7 @@ export async function seed(knex: Knex): Promise<void> {
       stock: 10000,
       price: 660.0,
     },
-    {
-      type: "Cat Toy",
-      name: "GiGwi - Melody Chaser (Mouse) Cat Toy",
-      description: `The perfect combination of simulated sound effects and simulated appearance is your cat's new darling.`,
-      imageUrl:
-        "https://shoplineimg.com/5f4c8d639271d80047ffe63d/61279dfeeb999e003e6cfd84/800x.webp?source_format=jpg",
-      stock: 10000,
-      price: 49.0,
-    },
+
     {
       type: "Cat Toy",
       name: "PETKIT - Catpedia Cat Scratcher",
@@ -236,6 +228,7 @@ export async function seed(knex: Knex): Promise<void> {
   // Inserts seed entries
   await knex("users").insert([
     { username: "admin", password: await hashPassword("aaa") },
+    { username: "user", password: await hashPassword("aaa") },
     { username: "chun", password: await hashPassword("aaa") },
     { username: "chung", password: await hashPassword("aaa") },
     { username: "yuet", password: await hashPassword("aaa") },
